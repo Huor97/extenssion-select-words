@@ -1,0 +1,15 @@
+body {
+  background-color: rgba(225, 255, 186, 0.704);
+}
+
+.text__container {
+  border: solid 2px rgb(58, 58, 245);
+}
+
+#text-container > li {
+  padding: 4px;
+}
+
+#text-container > li button {
+  margin-left: 10px;
+}

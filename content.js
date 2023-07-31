@@ -1,8 +1,3 @@
-document.getElementById("openNewPage").addEventListener("click", function () {
-  // Ouvrir la nouvelle page dans un nouvel onglet
-  browser.tabs.create({ url: browser.runtime.getURL("content.html") });
-});
-
 browser.storage.local.get(["pageText"], function (result) {
   if (result.pageText) {
     // pour chaque sélection de mots crée un li
