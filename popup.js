@@ -1,6 +1,11 @@
 browser.storage.local.get(["pageText"], function (result) {
-  console.log("popup debug:", result.pageText);
+  let text;
   if (result.pageText) {
-    document.getElementById("text-container").textContent = result.pageText;
+    // pour chaque selection de mots crée un li
+    for (let i = 0; i < result.pageText.length; i++) {
+      text = document.createElement("li");
+      text.textContent = result.pageText[i];
+      document.getElementById("text-container").appendChild(text);
+    }
   }
 });
