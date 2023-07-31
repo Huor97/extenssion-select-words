@@ -5,7 +5,9 @@
   "manifest_version": 2,
 
   "icons": {
-    "48": "icons/border-48.png"
+    "16": "icons/zone-de-texte16.png",
+    "32": "icons/zone-de-texte32.png",
+    "128": "icons/zone-de-texte128.png"
   },
 
   "browser_action": {
@@ -23,5 +25,5 @@
     }
   ],
 
-  "permissions": ["<all_urls>", "activeTab", "storage"]
+  "permissions": ["<all_urls>", "activeTab", "storage", "tabs"]
 }
