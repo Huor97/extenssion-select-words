@@ -1,4 +1,5 @@
-// backgroundScript.js
+let pageText = [];
+
 browser.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   console.log("message text is:", message.text);
   if (message.text) {
@@ -7,5 +8,12 @@ browser.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 
     // Met à jour la fenêtre contextuelle avec le texte récupéré
     browser.browserAction.setPopup({ popup: "popup.html" });
+  }
+});
+
+// Charger les données du stockage local lorsque l'extension démarre
+browser.storage.local.get(["pageText"], (result) => {
+  if (result.pageText) {
+    pageText = result.pageText;
   }
 });
